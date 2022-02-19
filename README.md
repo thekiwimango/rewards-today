@@ -5,7 +5,7 @@
 * Would you like track your rewards without connecting your wallets to any dubious site?
 * Does this sound like an infomercial? 
 
-This amazing little program will aggregate and show you an aggregation of your hard-earned staking rewards!
+This amazing little program will aggregate and show you a summary of your hard-earned staking rewards!
 
 ## Output example
 
@@ -19,15 +19,10 @@ This amazing little program will aggregate and show you an aggregation of your h
 That's it!
 
 Do you want an executable? `$ pyinstaller --onefile -n rewards main.py` \
-Find it in the `dist/rewards.exe` directory!
+And find it here: `dist/rewards.exe`
 
 ## Supported chains
-- All substrate networks
-  - Acala
-  - Astar
-  - Kusama
-  - Moonbeam
-  - Polkadot
+- All substrate networks (currently configured: Acala, Astar, Kusama, Moonbeam, Polkadot)
   - Others too! (they just need to be configured in `substrate/substrate_assets.py`)  
 - Cardano
 - Need more chains? Let me know or DIY and send a pull request :)
