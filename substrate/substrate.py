@@ -22,11 +22,12 @@ def get_subscan_rewards(chain: str, address: str, reference: str):
     yesterday_total = 0
 
     # Aggregate rewards from today and yesterday
-    for e in data:
-        if e['block_timestamp'] > today():
-            today_total = today_total + get_amount(e['amount'], decimals)
-        elif e['block_timestamp'] > yesterday():
-            yesterday_total = yesterday_total + get_amount(e['amount'], decimals)
+    if data is not None:
+        for e in data:
+            if e['block_timestamp'] > today():
+                today_total = today_total + get_amount(e['amount'], decimals)
+            elif e['block_timestamp'] > yesterday():
+                yesterday_total = yesterday_total + get_amount(e['amount'], decimals)
 
     # Return result
     return create_entry(chain=chain,
